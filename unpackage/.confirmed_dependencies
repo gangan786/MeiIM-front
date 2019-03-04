@@ -1,0 +1,22 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"imooc-chatlist.html",
+			"css/header.css",
+			"fontico/iconfont.css"
+		],
+		"refer": [
+			"imooc-me.html",
+			"imooc-discover.html",
+			"imooc-contact.html",
+			"imooc-chatlist.html"
+		]
+	},
+	"imooc-me.html": {
+		"resources": [
+			"fonts/mui.ttf"
+		]
+	}
+}
