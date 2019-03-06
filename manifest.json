@@ -211,10 +211,14 @@
 				"resources": [
 					"fonts/mui.ttf",
 					"image/qrcode.png",
-					"image/face-default-cat.png"
+					"image/face-default-cat.png",
+					"js/app.js",
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
 				"refer": [
-					"login.html"
+					"login.html",
+					"myface.html"
 				],
 				"priority": 0
 			},
@@ -244,6 +248,30 @@
 					"image/friends.png",
 					"image/scanscan.png",
 					"image/addfriends.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"myface.html": {
+				"resources": [
+					"css/header.css",
+					"js/app.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"image/face-default-cat.png"
+				],
+				"refer": [
+					"plugin/v3.1.6/myface-uploader.html"
+				],
+				"priority": 0
+			},
+			"plugin/v3.1.6/myface-uploader.html": {
+				"resources": [
+					"image/upload.png",
+					"plugin/v3.1.6/css/cropper.css",
+					"plugin/v3.1.6/css/main.css",
+					"plugin/v3.1.6/js/cropper.js"
 				],
 				"refer": [],
 				"priority": 0
