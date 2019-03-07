@@ -271,7 +271,21 @@
 					"image/upload.png",
 					"plugin/v3.1.6/css/cropper.css",
 					"plugin/v3.1.6/css/main.css",
-					"plugin/v3.1.6/js/cropper.js"
+					"plugin/v3.1.6/js/cropper.js",
+					"js/app.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/header.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"imooc-chatlist.html": {
+				"resources": [
+					"js/app.js",
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
