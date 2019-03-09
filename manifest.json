@@ -219,7 +219,8 @@
 				"refer": [
 					"login.html",
 					"myface.html",
-					"mynickname.html"
+					"mynickname.html",
+					"myQRCode.html"
 				],
 				"priority": 0
 			},
@@ -301,13 +302,22 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"myQRCode.html": {
+				"resources": [
+					"js/mui.js",
+					"css/mui.css",
+					"image/download.png",
+					"js/app.js",
+					"fonts/mui.ttf",
+					"css/header.css"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
-			"resources": [
-				"js/mui.js",
-				"css/mui.css"
-			]
+			"resources": []
 		}
 	}
 }

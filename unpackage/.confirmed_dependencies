@@ -26,7 +26,8 @@
 		"refer": [
 			"login.html",
 			"myface.html",
-			"mynickname.html"
+			"mynickname.html",
+			"myQRCode.html"
 		]
 	},
 	"imooc-contact.html": {
@@ -96,6 +97,16 @@
 			"js/mui.min.js",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
+			"css/header.css"
+		]
+	},
+	"myQRCode.html": {
+		"resources": [
+			"js/mui.js",
+			"css/mui.css",
+			"image/download.png",
+			"js/app.js",
+			"fonts/mui.ttf",
 			"css/header.css"
 		]
 	}
