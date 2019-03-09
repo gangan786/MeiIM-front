@@ -25,7 +25,8 @@
 		],
 		"refer": [
 			"login.html",
-			"myface.html"
+			"myface.html",
+			"mynickname.html"
 		]
 	},
 	"imooc-contact.html": {
@@ -87,6 +88,15 @@
 			"js/app.js",
 			"js/mui.min.js",
 			"css/mui.min.css"
+		]
+	},
+	"mynickname.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/header.css"
 		]
 	}
 }

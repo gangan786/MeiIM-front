@@ -218,7 +218,8 @@
 				],
 				"refer": [
 					"login.html",
-					"myface.html"
+					"myface.html",
+					"mynickname.html"
 				],
 				"priority": 0
 			},
@@ -286,6 +287,17 @@
 					"js/app.js",
 					"js/mui.min.js",
 					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mynickname.html": {
+				"resources": [
+					"js/app.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/header.css"
 				],
 				"refer": [],
 				"priority": 0
