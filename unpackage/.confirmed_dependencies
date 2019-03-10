@@ -55,7 +55,9 @@
 			"image/scanscan.png",
 			"image/addfriends.png"
 		],
-		"refer": []
+		"refer": [
+			"searchFriends.html"
+		]
 	},
 	"myface.html": {
 		"resources": [
@@ -107,6 +109,15 @@
 			"image/download.png",
 			"js/app.js",
 			"fonts/mui.ttf",
+			"css/header.css"
+		]
+	},
+	"searchFriends.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
 			"css/header.css"
 		]
 	}
