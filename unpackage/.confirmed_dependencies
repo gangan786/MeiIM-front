@@ -119,6 +119,18 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"css/header.css"
+		],
+		"refer": [
+			"searchFriendsResult.html"
+		]
+	},
+	"searchFriendsResult.html": {
+		"resources": [
+			"js/app.js",
+			"fonts/mui.ttf",
+			"js/mui.js",
+			"css/mui.css",
+			"css/header.css"
 		]
 	}
 }
