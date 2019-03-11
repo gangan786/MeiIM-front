@@ -64,14 +64,11 @@
 				thisWebview.addEventListener("show", function(){
 					loadingFriendRequests();
 				});
-				
-				
-				
-				
-				
-				
-				
-				
+	
+				// 添加自定义事件，刷新好友请求，初始化websocket
+				window.addEventListener("refresh", function(){
+					loadingFriendRequests();
+				});
 				
 			});
 			
@@ -123,7 +120,7 @@
 			function operatorFriendRequest(userId, friendId, operType) {
 				mui.ajax(app.serverUrl + "/u/operateFriendRequest?acceptUserId=" + userId
 												+ "&sendUserId=" + friendId
-												+ "&operateType=" + operType,{
+												+ "&operType=" + operType,{
 					data:{},
 					dataType:'json',//服务器返回json格式数据
 					type:'post',//HTTP请求类型

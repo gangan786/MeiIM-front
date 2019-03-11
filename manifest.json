@@ -252,7 +252,8 @@
 					"image/addfriends.png"
 				],
 				"refer": [
-					"searchFriends.html"
+					"searchFriends.html",
+					"scanme.html"
 				],
 				"priority": 0
 			},
@@ -339,6 +340,19 @@
 					"css/header.css"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"scanme.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.js",
+					"css/mui.css",
+					"css/header.css",
+					"js/app.js"
+				],
+				"refer": [
+					"searchFriendsResult.html"
+				],
 				"priority": 0
 			}
 		},
