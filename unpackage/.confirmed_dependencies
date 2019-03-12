@@ -32,7 +32,13 @@
 	},
 	"imooc-contact.html": {
 		"resources": [
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"js/app.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/mui.indexedlist.css",
+			"js/mui.indexedlist.js",
+			"js/nickname.js"
 		],
 		"refer": []
 	},

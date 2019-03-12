@@ -120,7 +120,7 @@
 			function operatorFriendRequest(userId, friendId, operType) {
 				mui.ajax(app.serverUrl + "/u/operateFriendRequest?acceptUserId=" + userId
 												+ "&sendUserId=" + friendId
-												+ "&operType=" + operType,{
+												+ "&operateType=" + operType,{
 					data:{},
 					dataType:'json',//服务器返回json格式数据
 					type:'post',//HTTP请求类型
