@@ -40,7 +40,9 @@
 			"js/mui.indexedlist.js",
 			"js/nickname.js"
 		],
-		"refer": []
+		"refer": [
+			"chatting.html"
+		]
 	},
 	"login.html": {
 		"resources": [
@@ -150,6 +152,17 @@
 		],
 		"refer": [
 			"searchFriendsResult.html"
+		]
+	},
+	"chatting.html": {
+		"resources": [
+			"css/chat.css",
+			"css/header.css",
+			"js/app.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"image/face-default-cat.png"
 		]
 	}
 }

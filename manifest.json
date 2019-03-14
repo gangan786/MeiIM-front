@@ -234,7 +234,9 @@
 					"js/mui.indexedlist.js",
 					"js/nickname.js"
 				],
-				"refer": [],
+				"refer": [
+					"chatting.html"
+				],
 				"priority": 0
 			},
 			"login.html": {
@@ -359,6 +361,19 @@
 				"refer": [
 					"searchFriendsResult.html"
 				],
+				"priority": 0
+			},
+			"chatting.html": {
+				"resources": [
+					"css/chat.css",
+					"css/header.css",
+					"js/app.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"image/face-default-cat.png"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
