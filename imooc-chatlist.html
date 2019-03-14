@@ -185,7 +185,7 @@
 					CHAT.chat(JSON.stringify(dataContent));
 					
 					// 每次连接之后，获取用户的未读未签收消息列表
-//					fetchUnReadMsg();
+					fetchUnReadMsg();
 					
 					// 定时发送心跳
 //					setInterval("CHAT.keepalive()", 10000);
@@ -260,6 +260,49 @@
 					//fetchContactList();
 				}
 			};
+			
+			// 每次重连后获取服务器的未签收消息
+			function fetchUnReadMsg() {
+				var user = app.getUserGlobalInfo();
+				var msgIds = ",";	// 格式：  ,1001,1002,1003,
+				mui.ajax(app.serverUrl + "/u/getUnReadMsgList?acceptUserId=" + user.id,{
+					data:{},
+					dataType:'json',//服务器返回json格式数据
+					type:'post',//HTTP请求类型
+					timeout:10000,//超时时间设置为10秒；
+					headers:{'Content-Type':'application/json'},	              
+					success:function(data){
+						
+						if (data.status == 200) {
+							var unReadMsgList = data.data;
+							console.log("未送达消息为：" + JSON.stringify(unReadMsgList));
+							
+							// 1. 保存聊天记录到本地
+							// 2. 保存聊天快照到本地
+							// 3. 对这些未签收的消息，批量签收
+							for (var i = 0 ; i < unReadMsgList.length ; i ++) {
+								var msgObj = unReadMsgList[i];
+								// 逐条存入聊天记录
+								app.saveUserChatHistory(msgObj.acceptUserId, 
+														msgObj.sendUserId, 
+														msgObj.msg, 2);
+								// 存入聊天快照
+								app.saveUserChatSnapshot(msgObj.acceptUserId, 
+														 msgObj.sendUserId, 
+														 msgObj.msg, false);
+								// 拼接批量接受的消息id字符串，逗号间隔
+								msgIds += msgObj.id;
+								msgIds += ",";
+							}
+							
+							// 调用批量签收的方法
+							CHAT.signMsgList(msgIds);
+							// 刷新快照
+							loadingChatSnapshot();
+						}
+					}
+				});
+			}
 			
 			/**
 			 * 获取好友列表并缓存至本地
