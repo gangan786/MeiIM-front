@@ -150,6 +150,11 @@
 //					setInterval("CHAT.keepalive()", 10000);
 					
 				},
+				
+				/**
+				 * 收到服务器传来的数据的函数回调
+				 * @param {Object} e
+				 */
 				wsmessage: function(e) {
 					console.log("接受到消息：" + e.data);
 					
@@ -157,6 +162,7 @@
 					var dataContent = JSON.parse(e.data);
 					var action = dataContent.action;
 					if (action === app.PULL_FRIEND) {
+						//好友通过你的添加请求，刷新你的好友列表
 						fetchContactList();
 						return false;						
 					}
@@ -213,6 +219,27 @@
 					//fetchContactList();
 				}
 			};
+			
+			/**
+			 * 获取好友列表并缓存至本地
+			 */
+			function fetchContactList() {
+				var user = app.getUserGlobalInfo();
+				mui.ajax(app.serverUrl + "/u/myFriends?userId=" + user.id,{
+					data:{},
+					dataType:'json',//服务器返回json格式数据
+					type:'post',//HTTP请求类型
+					timeout:10000,//超时时间设置为10秒；
+					headers:{'Content-Type':'application/json'},	              
+					success:function(data){
+						
+						if (data.status == 200) {
+							var contactList = data.data;
+							app.setContactList(contactList);
+						}
+					}
+				});
+			}
 			
 			/**
 			 * 加载好友请求列表
